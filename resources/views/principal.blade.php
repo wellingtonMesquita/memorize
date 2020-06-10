@@ -96,14 +96,15 @@
                 <div class="navbar-wrapper">
 
                     <div class="navbar-logo">
-                        <a class="mobile-menu" id="mobile-collapse" href="#!">
-                            <i class="feather icon-menu"></i>
-                        </a>
-                        <a href="{{ url('/') }}">
+                       
+                        <a  href="{{ url('/') }}">
 
                             <img class="img-fluid" src="/assets/logo.png" alt="Theme-Logo">
                         </a>
-                        <a class="mobile-options">
+                        <a class="mobile-menu col-4" id="mobile-collapse" href="#!">
+                            <i class="feather icon-menu"></i>
+                        </a>
+                        <a class="mobile-options col-4" >
                             <i class="feather icon-more-horizontal"></i>
                         </a>
                     </div>
@@ -119,11 +120,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li>
-                                <a href="#!" onclick="javascript:toggleFullScreen()">
-                                    <i class="feather icon-maximize full-screen"></i>
-                                </a>
-                            </li>
+                            
                         </ul>
                         <ul class="nav-right">
                             <li class="header-notification">
