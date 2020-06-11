@@ -21,7 +21,7 @@ Auth::routes();
 Route::group(['middleware' => 'auth'], function() {
 Route::get('/cadastro', function () {return view('cadastro');});
 Route::get('/words/leson', 'WordsController@getWords');
-Route::get('/words/leson/comparar', 'WordsController@confirm');
+Route::post('/words/leson/comparar/{id}', 'WordsController@confirm');
 Route::get('/words/leson/reset', 'WordsController@reset');
 Route::resource('words', 'WordsController');
 Route::get('/', 'WordsController@dashboard')->name('home');
