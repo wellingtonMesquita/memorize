@@ -100,10 +100,10 @@ class WordsController extends Controller
      * @param  \App\Word  $word
      * @return \Illuminate\Http\Response
      */
-    public function confirm(Request $request)
+    public function confirm(Request $request,$id)
     {
-
-        $palavraEstrangeira = Word::where('foreign_words', '=', $request->foreign_words)->first();
+    
+        $palavraEstrangeira = Word::where('id', '=', $id)->first();
         if (strcasecmp($palavraEstrangeira['native_words'], $request->native_words) == 0) {
             $palavraEstrangeira->word_learned = $palavraEstrangeira->word_learned + 1;
             $palavraEstrangeira->status = 1;
