@@ -43,7 +43,7 @@
                     <div class="col-md-8 col-sm-8">
                         @if($word->status == 0)
                         <div class="row align-items-center" style="margin-top:10px;">
-                            <input style="margin-left: 10px;" class=" form-control col-md-7 col-sm-7 " id="native_words" name="native_words" type="text" required>
+                            <input style="margin-left: 10px;" class=" form-control col-md-7 col-sm-7 " name="native_words" type="text" required>
                             <button type="submit" class=" btn btn-success btn-square col-md-4 col-sm-4" style="margin-left: 5px;">Ok</button>
                         </div>
                         @endif
@@ -58,34 +58,7 @@
 
 
 </div>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script>
-    $(document).ready(function() {
-        $("#reset").on('click', function() {
-            console.log($(this).serialize);
-            $.ajax({
-
-                type: 'GET',
-                url: "{!! URL::to('/words/leson/reset') !!}",
-                dataType: 'JSON',
-                data: {
-                    "_token": "{{ csrf_token() }}",
-                },
-                success: function(data) {},
-                error: function() {
-                    alert('Erro');
-                },
-            });
-
-
-        });
-    });
-
-    function testAnim(x) {
-
-    };
-</script>
+   
 <style>
     .meio {
         position: absolute;
@@ -175,4 +148,5 @@
         background-color: transparent;
     }
 </style>
+
 @stop
