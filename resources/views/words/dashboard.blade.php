@@ -32,10 +32,25 @@
         <div class="row">
 
             <!-- Default card start -->
-
-
             <div class="col-xl-3 col-md-6">
                 <div class="card bg-c-blue update-card">
+                    <div class="card-block">
+                        <div class="row align-items-end">
+                            <div class="col-8">
+                                <h4 class="text-white">{{$data['total']}}</h4>
+                                <h6 class="text-white m-b-0">Total de Palavras</h6>
+                            </div>
+                            <div class="col-4 text-right">
+                                <canvas id="update-chart-1" height="50"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6">
+                <div class="card bg-c-orange update-card">
                     <div class="card-block">
                         <div class="row align-items-end">
                             <div class="col-8">
