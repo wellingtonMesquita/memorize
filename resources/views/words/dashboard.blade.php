@@ -50,7 +50,7 @@
             </div>
 
             <div class="col-xl-3 col-md-6">
-                <div class="card bg-c-orange update-card">
+                <div class="card bg-c-yellow update-card">
                     <div class="card-block">
                         <div class="row align-items-end">
                             <div class="col-8">
