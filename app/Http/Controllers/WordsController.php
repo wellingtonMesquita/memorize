@@ -91,7 +91,7 @@ class WordsController extends Controller
      */
     public function getWords()
     {
-        $words =  Word::where('word_learned', '<=', 5)->orderBy('status', 'ASC')->where('user_id', Auth::user()->id)->get();
+        $words =  Word::where('word_learned', '<=', 5)->orderBy('status', 'ASC')->orderBy('word_learned', 'ASC')->where('user_id', Auth::user()->id)->offset(0)->limit(10)->get();
         $data = ['hit' => false];
         return view('words.leson', compact('words'), compact('data'));
     }
@@ -127,7 +127,14 @@ class WordsController extends Controller
             $word->status = 0;
             $word->update();
         }
-        $words =  Word::where('word_learned', '<=', 5)->orderBy('status', 'ASC')->where('user_id', Auth::user()->id)->get();
+        $words =  Word::where('word_learned', '<=', 5)->orderBy('status', 'ASC')->orderBy('word_learned', 'ASC')->where('user_id', Auth::user()->id)->offset(0)->limit(10)->get();
+        return view('words.leson', compact('words'))->render();
+    }
+
+
+    public function revise()
+    {
+        $words =  Word::where('word_learned', '<=', 5)->orderBy('status', 'DESC')->orderBy('word_learned', 'ASC')->where('user_id', Auth::user()->id)->offset(0)->limit(10)->get();
         return view('words.leson', compact('words'))->render();
     }
 

@@ -3,7 +3,8 @@
 <div class="container">
     <div class="row ">
         <div class="col-12  col-xs-12 col-sm-12">
-            <a href="{{ url('/words/leson/reset') }}" class="btn btn-inverse btn-square" style="float:right;">Reset</a>
+            <a href="{{ url('/words/leson/revise') }}" class="btn btn-inverse btn-square" style="float:right;">Revise</a>
+            <a style="margin-left: 10px;" href="{{ url('/words/leson/reset') }}" class="btn btn-inverse btn-square" style="float:right;">Reset</a>
         </div>
     </div>
 
