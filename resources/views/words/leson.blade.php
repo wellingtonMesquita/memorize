@@ -4,8 +4,9 @@
     <div class="row ">
         <div class="col-12  col-xs-12 col-sm-12">
             <a  href="{{ url('/words/leson/reset') }}" class="btn btn-inverse btn-square " style="float:right;">Resetar</a>
-            <p>
-            <a href="{{ url('/words/leson/review') }}" class="btn btn-inverse btn-info" style="margin-right:10px;float:right;">Revisão</a>
+            <a href="{{ url('/words/leson') }}" class="btn btn-primary btn-square" style="margin-right:10px;float:right;">Voltar</a>
+            <a href="{{ url('/words/leson/review') }}" class="btn btn-info btn-square" style="margin-right:10px;float:right;">Revisão</a>
+
         </div>
     </div>
 
