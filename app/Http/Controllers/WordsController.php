@@ -66,7 +66,7 @@ class WordsController extends Controller
         $total = Word::where('user_id', Auth::user()->id)->count();
         $aprendidas = Word::where('word_learned', '>=', 5)->where('user_id', Auth::user()->id)->count();
         $listanegra = Word::where('word_wrong', '>=', 5)->where('user_id', Auth::user()->id)->count();
-        $porcetagem =  ($aprendidas / $total) * 100;
+        $total <=0  ? $porcetagem = 0 : $porcetagem =  ($aprendidas / $total) * 100;
         $data = ['total'=>$total,'aprendidas' => $aprendidas, 'listaNegra' => $listanegra, 'porcetagemAcerto' => floor($porcetagem)];
         return view('words.dashboard', compact('data'));
     }
