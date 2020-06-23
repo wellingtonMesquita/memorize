@@ -23,7 +23,7 @@ Route::get('/cadastro', function () {return view('cadastro');});
 Route::get('/words/leson', 'WordsController@getWords');
 Route::post('/words/leson/comparar/{id}', 'WordsController@confirm');
 Route::get('/words/leson/reset', 'WordsController@reset');
-Route::get('/words/leson/revise', 'WordsController@revise');
+Route::get('/words/leson/review', 'WordsController@review');
 Route::resource('words', 'WordsController');
 Route::get('/', 'WordsController@dashboard')->name('home');
 });

@@ -132,7 +132,7 @@ class WordsController extends Controller
     }
 
 
-    public function revise()
+    public function review()
     {
         $words =  Word::where('word_learned', '<=', 5)->orderBy('status', 'DESC')->orderBy('word_learned', 'ASC')->where('user_id', Auth::user()->id)->offset(0)->limit(10)->get();
         return view('words.leson', compact('words'))->render();
