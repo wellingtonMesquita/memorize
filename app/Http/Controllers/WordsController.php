@@ -115,7 +115,7 @@ class WordsController extends Controller
             $palavraEstrangeira->status = 2;
             $palavraEstrangeira->update();
         }
-        $words =  Word::where('word_learned', '<=', 5)->orderBy('status', 'ASC')->where('user_id', Auth::user()->id)->get();
+        $words =  Word::where('word_learned', '<=', 5)->orderBy('status', 'ASC')->orderBy('word_learned', 'ASC')->where('user_id', Auth::user()->id)->offset(0)->limit(10)->get();
         return view('words.leson', compact('words'));
     }
 
